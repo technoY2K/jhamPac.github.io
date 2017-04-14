@@ -25,12 +25,22 @@
 		"oAP": "\/css\/main.css.map",
 		"oF": 0
 		},
-	"\/images\/natural_black.png": {
+	"\/images\/naturalBlack.png": {
 		"ft": 32768,
 		"iS": 261640,
 		"l": 1,
 		"oA": 0,
-		"oAP": "\/images\/natural_black.png",
+		"oAP": "\/images\/naturalBlack.png",
+		"oF": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/images\/tent-triangle.png": {
+		"ft": 32768,
+		"iS": 666,
+		"l": 1,
+		"oA": 0,
+		"oAP": "\/images\/tent-triangle.png",
 		"oF": 0,
 		"opt": 0,
 		"q": 100
