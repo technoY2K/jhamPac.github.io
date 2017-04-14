@@ -1,3 +1,25 @@
 body {
   background-image: url("../images/naturalBlack.png");
+  font-size: 16px;
+  font-family: "VT323", monospace;
+  position: relative;
+
+  #logo-container {
+    height: 150px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    transform: translateY(25%);
+    width: 150px;
+    z-index: 999;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .name-banner {
+    color: #fff;
+  }
 }
