@@ -1,3 +1,9 @@
+/*
+Mixins
+*/
+
+@import "mixins/_breakpoints";
+
 body {
   background: linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50) ), url("../images/naturalBlack.png");
   font-size: 16px;
@@ -18,15 +24,18 @@ body {
       text-transform: uppercase;
 
       h1 {
+        font-size: 1.5em;
         font-weight: 800;
-      }
+        transition: all 500ms linear;
+        text-shadow: 2px 2px #000;
 
-      h2 {
-        font-weight: 800;
-      }
+        @include breakpoint(medium) {
+          font-size: 1.8em;
+        }
 
-      h3 {
-        font-weight: 800;
+        @include breakpoint(large) {
+          font-size: 2.2em;
+        }
       }
     }
   }
