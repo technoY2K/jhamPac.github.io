@@ -6,8 +6,8 @@ Mixins
 
 body {
   background: linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50) ), url("../images/naturalBlack.png");
-  font-size: 16px;
   font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
 
   .content-row {
     border: solid 3px #FFFFFF;
@@ -16,12 +16,12 @@ body {
 
     .content-box {
       color: #FFF;
+      letter-spacing: 2px;
       margin: 0 auto;
       margin-top: 10%;
-      letter-spacing: 2px;
-      width: 75%;
       text-align: center;
       text-transform: uppercase;
+      width: 75%;
 
       h1 {
         font-size: 1.5em;
