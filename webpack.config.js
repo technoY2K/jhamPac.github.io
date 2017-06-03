@@ -50,7 +50,7 @@ let PLUGINS = [
 
   new ExtractTextPlugin({
     disable: !isProduction,
-    filename: 'css/[hash].css',
+    filename: 'css/[name].css',
     allChunks: true
   }),
 
