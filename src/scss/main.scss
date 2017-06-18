@@ -1,5 +1,36 @@
 @import '~materialize-css/sass/materialize';
 
+$color-background: #E1E8F0;
+
 body {
-  
+  background-color: $color-background;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+
+  #main {
+
+    .profile {
+      background-color: #e62739;
+      color: #FFFFFF;
+      height: 50vh;
+
+      div.col {
+        padding-top: 50px;
+      }
+
+      h1 {
+        margin-top: -15px;
+      }
+    }
+
+    .other {
+      background-color: #9068be;
+      height: 50vh;
+
+      .hobbies {
+        background-color: #6ed3cf;
+        height: 100%;
+      }
+    }
+  }
 }
