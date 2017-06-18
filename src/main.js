@@ -11,7 +11,6 @@ import './scss/main';
 // components
 import App from 'Comps/App';
 
-
 $(document).ready(function() {
 
   ReactDOM.render(
