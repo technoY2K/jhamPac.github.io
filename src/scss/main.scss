@@ -1,6 +1,10 @@
 @import '~materialize-css/sass/materialize';
 
 $color-background: #E1E8F0;
+$color-cyan: #6ED3CF;
+$color-red: #E62739;
+$color-purple: #9068BE;
+$color-white: #FFFFFF;
 
 body {
   background-color: $color-background;
@@ -10,8 +14,8 @@ body {
   #main {
 
     .profile {
-      background-color: #e62739;
-      color: #FFFFFF;
+      background-color: $color-red;
+      color: $color-white;
       height: 50vh;
 
       div.col {
@@ -19,16 +23,17 @@ body {
       }
 
       h1 {
+        font-weight: 300;
         margin-top: -15px;
       }
     }
 
     .other {
-      background-color: #9068be;
+      background-color: $color-purple;
       height: 50vh;
 
       .hobbies {
-        background-color: #6ed3cf;
+        background-color: $color-cyan;
         height: 100%;
       }
     }
