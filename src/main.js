@@ -12,7 +12,7 @@ import './scss/main'
 import App from 'Comps/App'
 
 $(document).ready(function() {
-
+  
   ReactDOM.render(
     <App />,
     document.getElementById('app')

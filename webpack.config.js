@@ -35,7 +35,7 @@ const RULES = [
 
   { test: /\.scss$/, use: (isProduction) ? scssProd : scssDev },
 
-  { test: /\.(png|gif|jpg|svg)$/, use: [{loader: 'file-loader', options: {name: 'icons/[name].[ext]'}}, {loader: 'image-webpack-loader'}] },
+  { test: /\.(png|gif|jpg|svg)$/, use: [{loader: 'file-loader', options: {name: 'images/[name].[ext]'}}, {loader: 'image-webpack-loader'}] },
 
   { test: /\.(eot|ttf|woff|woff2)$/, use: [{loader: 'url-loader', options: {limit: '10000', name: 'fonts/[name].[ext]'}}] }
 ]
@@ -79,7 +79,7 @@ module.exports = {
     modules: [path.resolve('./node_modules')],
     alias: {
       Comps: path.resolve(__dirname, './src/js/comps'),
-      Icons: path.resolve(__dirname, './src/icons'),
+      Images: path.resolve(__dirname, './src/images'),
       Utils: path.resolve(__dirname, './src/js/utils')
     }
   },
