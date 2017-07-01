@@ -1,23 +1,23 @@
 // Dependencies
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const extractCSS = new ExtractTextPlugin('css/[hash:4].css');
-const extractSCSS = new ExtractTextPlugin('css/[hash:4].css');
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const extractCSS = new ExtractTextPlugin('css/[hash:4].css')
+const extractSCSS = new ExtractTextPlugin('css/[hash:4].css')
 
 // Webpack variables
-let isProduction = process.env.NODE_ENV === 'production';
-let cssDev = ['style-loader', { loader: 'css-loader', options: { importLoaders: 1 } }, { loader: 'postcss-loader', options: { sourceMap: true } }];
-let cssProd = ExtractTextPlugin.extract( { fallback: 'style-loader', use: [{ loader: 'css-loader', options: { importLoaders: 1 } }, { loader: 'postcss-loader', options: { sourceMap: true } }] } );
-let scssDev = ['style-loader', 'css-loader', 'resolve-url-loader', {loader: 'sass-loader', options: { sourceMap: true }}, 'import-glob-loader' ];
+let isProduction = process.env.NODE_ENV === 'production'
+let cssDev = ['style-loader', { loader: 'css-loader', options: { importLoaders: 1 } }, { loader: 'postcss-loader', options: { sourceMap: true } }]
+let cssProd = ExtractTextPlugin.extract( { fallback: 'style-loader', use: [{ loader: 'css-loader', options: { importLoaders: 1 } }, { loader: 'postcss-loader', options: { sourceMap: true } }] } )
+let scssDev = ['style-loader', 'css-loader', 'resolve-url-loader', {loader: 'sass-loader', options: { sourceMap: true }}, 'import-glob-loader' ]
 let scssProd = ExtractTextPlugin.extract({
   fallback: 'style-loader',
   use: ['css-loader', 'resolve-url-loader', {loader: 'sass-loader', options: { sourceMap: true }}, 'import-glob-loader' ]
-});
+})
 
-const DISTPATH  = path.join(__dirname, '/');
-const ENTRYFILE = path.join(__dirname, 'src/main.js');
+const DISTPATH  = path.join(__dirname, '/')
+const ENTRYFILE = path.join(__dirname, 'src/main.js')
 
 const RULES = [
 
@@ -54,10 +54,10 @@ let PLUGINS = [
     allChunks: true
   }),
 
-];
+]
 
 if ( !isProduction ) {
-  PLUGINS.push(new webpack.HotModuleReplacementPlugin());
+  PLUGINS.push(new webpack.HotModuleReplacementPlugin())
 }
 
 // Webpack settings start here
