@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 export default class App extends React.Component {
 
@@ -17,7 +17,7 @@ export default class App extends React.Component {
           <div className="col s9"></div>
         </section>
       </main>
-    );
+    )
   }
 
 }
