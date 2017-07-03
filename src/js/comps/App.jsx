@@ -30,10 +30,10 @@ export default class App extends React.Component {
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/kevia.cloud?ref=br_rs">
+              <a href="https://github.com/jhamPac">
                 <div className="chip">
-                  <i className="material-icons">face</i>
-                  <span>Facebook</span>
+                  <i className="material-icons">desktop_mac</i>
+                  <span>GitHub</span>
                 </div>
               </a>
             </li>
