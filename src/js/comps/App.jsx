@@ -11,6 +11,34 @@ export default class App extends React.Component {
           <p>Scottsdale, AZ</p>
         </div>
         <div className="purple-filter"></div>
+        <div className="social-box">
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/kevia-cloud-3291b5137">
+                <div className="chip">
+                  <i className="material-icons">group_work</i>
+                  <span>LinkedIn</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/therealcloud__">
+                <div className="chip">
+                  <i className="material-icons">flash_on</i>
+                  <span>Twitter</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/kevia.cloud?ref=br_rs">
+                <div className="chip">
+                  <i className="material-icons">face</i>
+                  <span>Facebook</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
       </main>
     )
   }
