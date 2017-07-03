@@ -1,42 +1,74 @@
 @import '~materialize-css/sass/materialize';
 
-$color-background: #E1E8F0;
-$color-cyan: #6ED3CF;
-$color-grey: #55595D;
-$color-red: #E62739;
-$color-purple: #9068BE;
-$color-white: #FFFFFF;
+$color-seashell: #F1F1F1;
+$color-turquoise: #28DDE0;
+$color-grey: #E7E7E7;
+$color-purple: #5634d1;
+$color-silver: #AFAFAF;
+
+html {
+  font-size: 16px;
+}
 
 body {
-  background-color: $color-background;
+  background-color: $color-seashell;
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
 
   #main {
+    height: 100vh;
+    background-image: url('/images/profile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relaive;
+    width: 100%;
 
-    .profile {
-      background-color: $color-red;
-      color: $color-white;
-      height: 50vh;
+    .text-box {
+      border-top: 5px;
+      border-bottom: 5px;
+      border-color: $color-seashell;
+      border-style: solid;
+      border-left: none;
+      border-right: none;
+      left: 10%;
+      top: 10%;
+      padding: 15px;
+      position: absolute;
+      text-align: center;
+      z-index: 9999;
 
-      div.col {
-        padding-top: 50px;
-      }
 
       h1 {
-        font-weight: 300;
-        margin-top: -15px;
+        color: $color-turquoise;
+        font-size: 2rem;
+        font-weight: 700;
+        transition: all 500ms;
+        text-shadow: 5px 2px 0 $color-purple;
+
+        @media #{$medium-and-up} {
+          font-size: 3.5rem;
+        }
+
+        @media #{$large-and-up} {
+          font-size: 4rem;
+        }
+      }
+
+      p {
+        color: $color-turquoise;
+        font-weight: 400;
+        text-align: left;
+        transition: all 500ms;
+
       }
     }
 
-    .other {
+    .purple-filter {
       background-color: $color-purple;
-      height: 50vh;
-
-      .hobbies {
-        background-color: $color-cyan;
-        height: 100%;
-      }
+      height: 100%;
+      position: absolute;
+      opacity: 0.4;
+      width: 100%;
     }
   }
 }
