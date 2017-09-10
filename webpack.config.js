@@ -1,24 +1,47 @@
 // Dependencies
-const PATH = require('path');
-const CSS_TEXT_EXTRACT = new ExtractTextPlugin('css/[hash:4].css');
-const SCSS_TEXT_EXTRACT = new ExtractTextPlugin('css/[hash:4].css');
 let Webpack = require('webpack');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 let ExtractTextPlugin = require('extract-text-webpack-plugin');
+const PATH = require('path');
+const CSS_TEXT_EXTRACT = new ExtractTextPlugin('css/[hash:4].css');
+const SCSS_TEXT_EXTRACT = new ExtractTextPlugin('css/[hash:4].css');
 
 // Webpack variables
 let is_production = process.env.NODE_ENV === 'production';
 
-let development_css = ['style-loader', { loader: 'css-loader', options: { importLoaders: 1 } }, { loader: 'postcss-loader', options: { sourceMap: true } }];
+let development_css = [
+  'style-loader',
+  { loader: 'css-loader',     options: { importLoaders: 1 } },
+  { loader: 'postcss-loader', options: { sourceMap: true } }
+];
 
-let production_css = ExtractTextPlugin.extract( { fallback: 'style-loader', use: [{ loader: 'css-loader', options: { importLoaders: 1 } }, { loader: 'postcss-loader', options: { sourceMap: true } }] } );
+let production_css = ExtractTextPlugin.extract(
+  { fallback: 'style-loader',
+    use: [
+      { loader: 'css-loader',     options: { importLoaders: 1 } },
+      { loader: 'postcss-loader', options: { sourceMap: true } }
+    ]
+  }
+);
 
-let development_scss = ['style-loader', 'css-loader', 'resolve-url-loader', {loader: 'sass-loader', options: { sourceMap: true }}, 'import-glob-loader' ];
+let development_scss = [
+  'style-loader',
+  'css-loader',
+  'resolve-url-loader',
+  { loader: 'sass-loader', options: { sourceMap: true } },
+  'import-glob-loader'
+];
 
-let production_scss = ExtractTextPlugin.extract({
-  fallback: 'style-loader',
-  use: ['css-loader', 'resolve-url-loader', {loader: 'sass-loader', options: { sourceMap: true }}, 'import-glob-loader' ]
-});
+let production_scss = ExtractTextPlugin.extract(
+  { fallback: 'style-loader',
+    use: [
+      'css-loader',
+      'resolve-url-loader',
+      { loader: 'sass-loader', options: { sourceMap: true } },
+      'import-glob-loader'
+    ]
+  }
+);
 
 const DISTPATH  = PATH.join(__dirname, '/');
 const ENTRYFILE = PATH.join(__dirname, 'src/main.js');
@@ -29,7 +52,7 @@ const RULES = [
     use: {
       loader: 'babel-loader',
       options: {
-        presets: ['es2015', 'react'],
+        presets: ['es2015', 'react', 'stage-3'],
         plugins: [require('babel-plugin-transform-class-properties')]
       }
     }
@@ -39,9 +62,16 @@ const RULES = [
 
   { test: /\.scss$/, use: (is_production) ? production_scss : development_scss },
 
-  { test: /\.(png|gif|jpg|svg)$/, use: [{loader: 'file-loader', options: {name: 'images/[name].[ext]'}}, {loader: 'image-webpack-loader'}] },
+  { test: /\.(png|gif|jpg|svg)$/, use: [
+      { loader: 'file-loader', options: { name: 'images/[name].[ext]' }},
+      { loader: 'image-webpack-loader'}
+    ]
+  },
 
-  { test: /\.(eot|ttf|woff|woff2)$/, use: [{loader: 'url-loader', options: {limit: '10000', name: 'fonts/[name].[ext]'}}] }
+  { test: /\.(eot|ttf|woff|woff2)$/, use: [
+      { loader: 'url-loader', options: { limit: '10000', name: 'fonts/[name].[ext]'}}
+    ]
+  }
 ];
 
 const PLUGINS = [
