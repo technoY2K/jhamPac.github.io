@@ -7,15 +7,15 @@ const CSS_TEXT_EXTRACT = new ExtractTextPlugin('css/[hash:4].css');
 const SCSS_TEXT_EXTRACT = new ExtractTextPlugin('css/[hash:4].css');
 
 // Webpack variables
-let is_production = process.env.NODE_ENV === 'production';
+let isProduction = process.env.NODE_ENV === 'production';
 
-let development_css = [
+let devCSS = [
   'style-loader',
   { loader: 'css-loader',     options: { importLoaders: 1 } },
   { loader: 'postcss-loader', options: { sourceMap: true } }
 ];
 
-let production_css = ExtractTextPlugin.extract(
+let prodCSS = ExtractTextPlugin.extract(
   { fallback: 'style-loader',
     use: [
       { loader: 'css-loader',     options: { importLoaders: 1 } },
@@ -24,7 +24,7 @@ let production_css = ExtractTextPlugin.extract(
   }
 );
 
-let development_scss = [
+let devSCSS = [
   'style-loader',
   'css-loader',
   'resolve-url-loader',
@@ -32,7 +32,7 @@ let development_scss = [
   'import-glob-loader'
 ];
 
-let production_scss = ExtractTextPlugin.extract(
+let prodSCSS = ExtractTextPlugin.extract(
   { fallback: 'style-loader',
     use: [
       'css-loader',
@@ -58,9 +58,9 @@ const RULES = [
     }
   },
 
-  { test: /\.css$/, use: (is_production) ? production_css : development_css  },
+  { test: /\.css$/, use: (isProduction) ? prodCSS : devCSS  },
 
-  { test: /\.scss$/, use: (is_production) ? production_scss : development_scss },
+  { test: /\.scss$/, use: (isProduction) ? prodSCSS : devSCSS },
 
   { test: /\.(png|gif|jpg|svg)$/, use: [
       { loader: 'file-loader', options: { name: 'images/[name].[ext]' }},
@@ -83,14 +83,14 @@ const PLUGINS = [
   new Webpack.NamedModulesPlugin(),
 
   new ExtractTextPlugin({
-    disable: !is_production,
+    disable: !isProduction,
     filename: 'css/[name].css',
     allChunks: true
   }),
 
 ];
 
-if ( !is_production ) {
+if ( !isProduction ) {
   PLUGINS.push(new Webpack.HotModuleReplacementPlugin());
 }
 
@@ -101,7 +101,7 @@ module.exports = {
 
   entry: {
     // we don't need dev server stuff for production builds.
-    main: is_production ? ENTRYFILE : [
+    main: isProduction ? ENTRYFILE : [
       'webpack-dev-server/client?http://localhost:8080',
       'webpack/hot/only-dev-server',
       ENTRYFILE
@@ -129,7 +129,7 @@ module.exports = {
   },
 
   // build speed plz
-  devtool: is_production ? 'cheap-module-source-map' : 'source-map',
+  devtool: isProduction ? 'cheap-module-source-map' : 'source-map',
 
   devServer: {
     contentBase: DISTPATH,
