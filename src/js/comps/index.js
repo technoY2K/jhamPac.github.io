@@ -14,15 +14,15 @@ export default class App extends React.Component {
         <div className="social-box">
           <ul>
             <li>
-              <a className="btn-floating btn-large waves-effect waves-light linkedin" href="https://www.linkedin.com/in/kevia-cloud-3291b5137">
+              <a className="btn-floating btn-large waves-effect waves-light linkedin" href="https://www.linkedin.com/in/kevia-cloud-3291b5137" target="_blank">
               </a>
             </li>
             <li>
-              <a className="btn-floating btn-large waves-effect waves-light twitter" href="https://twitter.com/therealcloud__">
+              <a className="btn-floating btn-large waves-effect waves-light twitter" href="https://twitter.com/therealcloud__" target="_blank">
               </a>
             </li>
             <li>
-              <a className="btn-floating btn-large waves-effect waves-light github" href="https://github.com/jhamPac">
+              <a className="btn-floating btn-large waves-effect waves-light github" href="https://github.com/jhamPac" target="_blank">
               </a>
             </li>
           </ul>
