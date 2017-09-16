@@ -14,27 +14,15 @@ export default class App extends React.Component {
         <div className="social-box">
           <ul>
             <li>
-              <a href="https://www.linkedin.com/in/kevia-cloud-3291b5137">
-                <div className="chip">
-                  <i className="material-icons">group_work</i>
-                  <span>LinkedIn</span>
-                </div>
+              <a className="btn-floating btn-large waves-effect waves-light linkedin" href="https://www.linkedin.com/in/kevia-cloud-3291b5137">
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/therealcloud__">
-                <div className="chip">
-                  <i className="material-icons">flash_on</i>
-                  <span>Twitter</span>
-                </div>
+              <a className="btn-floating btn-large waves-effect waves-light twitter" href="https://twitter.com/therealcloud__">
               </a>
             </li>
             <li>
-              <a href="https://github.com/jhamPac">
-                <div className="chip">
-                  <i className="material-icons">desktop_mac</i>
-                  <span>GitHub</span>
-                </div>
+              <a className="btn-floating btn-large waves-effect waves-light github" href="https://github.com/jhamPac">
               </a>
             </li>
           </ul>

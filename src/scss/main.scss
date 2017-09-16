@@ -74,15 +74,31 @@ body {
 
         li {
           display: inline-block;
-          margin-right: 5px;
+          margin-right: 20px;
 
-          i {
-            font-size: 8px;
-            margin-right: 5px;
-          }
-
-          .chip {
+          a {
             background-color: $color-seashell;
+
+            &.linkedin {
+              background-image: url('icons/linkedin.svg');
+              background-size: 100% 100%;
+              background-repeat: no-repeat;
+              background-position: center center;
+            }
+
+            &.twitter {
+              background-image: url('icons/twitter.svg');
+              background-size: 100% 100%;
+              background-repeat: no-repeat;
+              background-position: center center;
+            }
+
+            &.github {
+              background-image: url('icons/github.svg');
+              background-size: 100% 100%;
+              background-repeat: no-repeat;
+              background-position: center center;
+            }
           }
         }
       }
