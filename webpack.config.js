@@ -62,9 +62,14 @@ const RULES = [
 
   { test: /\.scss$/, use: (isProduction) ? prodSCSS : devSCSS },
 
-  { test: /\.(png|gif|jpg|svg)$/, use: [
+  { test: /\.(png|gif|jpg)$/, use: [
       { loader: 'file-loader', options: { name: 'images/[name].[ext]' }},
       { loader: 'image-webpack-loader'}
+    ]
+  },
+
+  { test: /\.svg$/, use: [
+      { loader: 'url-loader', options: { limit: '10000', name: 'icons/[name].[ext]'}}
     ]
   },
 
@@ -114,6 +119,7 @@ module.exports = {
     alias: {
       Comps: PATH.resolve(__dirname, './src/js/comps'),
       Images: PATH.resolve(__dirname, './src/images'),
+      Icons: PATH.resolve(__dirname, './src/icons'),
       Utils: PATH.resolve(__dirname, './src/js/utils')
     }
   },
