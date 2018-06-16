@@ -10,7 +10,7 @@ require('materialize-css/bin/materialize.js');
 import './scss/main';
 
 // components
-import App from 'Comps/';
+import App from 'comps/';
 
 $(document).ready(function() {
   ReactDOM.render(

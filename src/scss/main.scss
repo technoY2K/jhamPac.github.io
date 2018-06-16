@@ -16,7 +16,6 @@ body {
 
   #main {
     height: 100vh;
-    background-image: url('/images/profile.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -79,22 +78,7 @@ body {
           a {
             background-color: $color-seashell;
 
-            &.linkedin {
-              background-image: url('icons/linkedin.svg');
-              background-size: 100% 100%;
-              background-repeat: no-repeat;
-              background-position: center center;
-            }
-
-            &.twitter {
-              background-image: url('icons/twitter.svg');
-              background-size: 100% 100%;
-              background-repeat: no-repeat;
-              background-position: center center;
-            }
-
-            &.github {
-              background-image: url('icons/github.svg');
+            &.social-media-icon {
               background-size: 100% 100%;
               background-repeat: no-repeat;
               background-position: center center;

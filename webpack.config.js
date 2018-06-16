@@ -109,10 +109,10 @@ module.exports = {
     extensions: ['.js', '.jsx', '.css', '.scss'],
     modules: [PATH.resolve('./node_modules')],
     alias: {
-      Comps: PATH.resolve(__dirname, './src/js/comps'),
-      Images: PATH.resolve(__dirname, './src/images'),
-      Icons: PATH.resolve(__dirname, './src/icons'),
-      Utils: PATH.resolve(__dirname, './src/js/utils')
+      comps: PATH.resolve(__dirname, './src/js/comps'),
+      images: PATH.resolve(__dirname, './src/images'),
+      icons: PATH.resolve(__dirname, './src/icons'),
+      utils: PATH.resolve(__dirname, './src/js/utils')
     }
   },
 
