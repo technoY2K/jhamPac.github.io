@@ -1,47 +1,18 @@
-// Dependencies
-let Webpack = require('webpack');
-let HtmlWebpackPlugin = require('html-webpack-plugin');
-let ExtractTextPlugin = require('extract-text-webpack-plugin');
+const Webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCSSPlugin = require('mini-css-extract-plugin');
 const PATH = require('path');
-const CSS_TEXT_EXTRACT = new ExtractTextPlugin('css/[hash:4].css');
-const SCSS_TEXT_EXTRACT = new ExtractTextPlugin('css/[hash:4].css');
 
-// Webpack variables
-let isProduction = process.env.NODE_ENV === 'production';
 
-let devCSS = [
-  'style-loader',
-  { loader: 'css-loader',     options: { importLoaders: 1 } },
-  { loader: 'postcss-loader', options: { sourceMap: true } }
-];
+const isProduction = process.env.NODE_ENV === 'production';
 
-let prodCSS = ExtractTextPlugin.extract(
-  { fallback: 'style-loader',
-    use: [
-      { loader: 'css-loader',     options: { importLoaders: 1 } },
-      { loader: 'postcss-loader', options: { sourceMap: true } }
-    ]
-  }
-);
-
-let devSCSS = [
-  'style-loader',
-  'css-loader',
-  'resolve-url-loader',
-  { loader: 'sass-loader', options: { sourceMap: true } },
-  'import-glob-loader'
-];
-
-let prodSCSS = ExtractTextPlugin.extract(
-  { fallback: 'style-loader',
-    use: [
-      'css-loader',
-      'resolve-url-loader',
-      { loader: 'sass-loader', options: { sourceMap: true } },
-      'import-glob-loader'
-    ]
-  }
-);
+const SCSS = [
+    isProduction ? MiniCSSPlugin.loader : 'style-loader',
+    'css-loader',
+    'resolve-url-loader',
+    { loader: 'sass-loader', options: { sourceMap: true } },
+    'import-glob-loader'
+  ];
 
 const DISTPATH  = PATH.join(__dirname, '/');
 const ENTRYFILE = PATH.join(__dirname, 'src/main.js');
@@ -50,9 +21,7 @@ const RULES = [
 
   { test: /\.(jsx?)$/, exclude: /node_modules/, use: { loader: 'babel-loader' } },
 
-  { test: /\.css$/, use: (isProduction) ? prodCSS : devCSS  },
-
-  { test: /\.scss$/, use: (isProduction) ? prodSCSS : devSCSS },
+  { test: /\.scss$/, use: SCSS },
 
   { test: /\.(png|gif|jpg)$/, use: [
       { loader: 'file-loader', options: { name: 'images/[name].[ext]' }},
@@ -79,10 +48,8 @@ const PLUGINS = [
 
   new Webpack.NamedModulesPlugin(),
 
-  new ExtractTextPlugin({
-    disable: !isProduction,
-    filename: 'css/[name].css',
-    allChunks: true
+  new MiniCSSPlugin({
+    filename: 'css/[name].css'
   }),
 
 ];
@@ -97,7 +64,6 @@ if ( !isProduction ) {
 module.exports = {
 
   entry: {
-    // we don't need dev server stuff for production builds.
     main: isProduction ? ENTRYFILE : [
       'webpack-dev-server/client?http://localhost:8080',
       'webpack/hot/only-dev-server',
@@ -122,11 +88,23 @@ module.exports = {
     publicPath: '/'
   },
 
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /node_modules/,
+          chunks: 'initial',
+          name: 'vendor',
+          enforce: true
+        }
+      }
+    }
+  },
+
   module: {
     rules: RULES
   },
 
-  // build speed plz
   devtool: isProduction ? 'cheap-module-source-map' : 'source-map',
 
   devServer: {
@@ -137,5 +115,4 @@ module.exports = {
   },
 
   plugins: PLUGINS
-
 }
