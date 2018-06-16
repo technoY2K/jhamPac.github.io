@@ -1,7 +1,13 @@
 {
+  "plugins": ["react-hot-loader/babel"],
   "presets": [
-    "env",
+    ["env", { "modules": false, "useBuiltIns": true }],
     "react",
     "stage-0"
-  ]
+  ],
+  "env": {
+    "test": {
+      "presets": [["env"], "react", "stage-0"]
+    }
+  }
 }
