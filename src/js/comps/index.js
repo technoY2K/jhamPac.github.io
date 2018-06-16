@@ -6,12 +6,6 @@ export default class App extends Component {
   render() {
     return (
       <main id="main" style={ { backgroundImage: `url(${styles.backgroundImage})` } }>
-        <div className="text-box">
-          <h1>Kevia Cloud</h1>
-          <p>Front End Developer</p>
-          <p>Scottsdale, AZ</p>
-        </div>
-        <div className="purple-filter"></div>
         <div className="social-box">
           <ul>
             <li>

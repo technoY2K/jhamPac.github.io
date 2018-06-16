@@ -1,17 +1,10 @@
 @import '~materialize-css/sass/materialize';
 
-$color-seashell: #F1F1F1;
-$color-turquoise: #28DDE0;
-$color-grey: #E7E7E7;
-$color-purple: #5634d1;
-$color-silver: #AFAFAF;
-
 html {
   font-size: 16px;
 }
 
 body {
-  background-color: $color-seashell;
   font-family: 'Roboto', sans-serif;
 
   #main {
@@ -21,48 +14,6 @@ body {
     background-position: center center;
     position: relative;
     width: 100%;
-
-    .text-box {
-      left: 10%;
-      top: 10%;
-      padding: 15px;
-      position: absolute;
-      text-align: center;
-      z-index: 9999;
-
-
-      h1 {
-        color: $color-turquoise;
-        font-size: 2rem;
-        font-weight: 700;
-        transition: all 500ms;
-        text-shadow: 5px 2px 0 $color-purple;
-
-        @media #{$medium-and-up} {
-          font-size: 3.5rem;
-        }
-
-        @media #{$large-and-up} {
-          font-size: 4rem;
-        }
-      }
-
-      p {
-        color: $color-turquoise;
-        font-weight: 400;
-        text-align: left;
-        transition: all 500ms;
-
-      }
-    }
-
-    .purple-filter {
-      background-color: $color-purple;
-      height: 100vh;
-      position: absolute;
-      opacity: 0.4;
-      width: 100%;
-    }
 
     .social-box {
       bottom: 0;
@@ -76,7 +27,6 @@ body {
           margin-right: 20px;
 
           a {
-            background-color: $color-seashell;
 
             &.social-media-icon {
               background-size: 100% 100%;
