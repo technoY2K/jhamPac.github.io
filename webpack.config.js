@@ -48,15 +48,7 @@ const ENTRYFILE = PATH.join(__dirname, 'src/main.js');
 
 const RULES = [
 
-  {test: /\.(jsx?)$/, exclude: /node_modules/,
-    use: {
-      loader: 'babel-loader',
-      options: {
-        presets: ['es2015', 'react', 'stage-0'],
-        plugins: [require('babel-plugin-transform-class-properties')]
-      }
-    }
-  },
+  { test: /\.(jsx?)$/, exclude: /node_modules/, use: { loader: 'babel-loader' } },
 
   { test: /\.css$/, use: (isProduction) ? prodCSS : devCSS  },
 
