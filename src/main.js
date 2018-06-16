@@ -2,10 +2,6 @@
 import React    from 'react';
 import ReactDOM from 'react-dom';
 
-// bind jQuery to $
-let $ = window.jQuery = require('jquery');
-require('materialize-css/bin/materialize.js');
-
 // scss
 import './scss/main';
 
