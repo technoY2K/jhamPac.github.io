@@ -6,8 +6,17 @@ export default class App extends Component {
   render() {
     return (
       <main id="main" style={ { backgroundImage: `url(${styles.backgroundImage})` } }>
-        <div className="social-box">
+        <section className="nameBox">
+          <h1>Kevia Cloud</h1>
           <ul>
+            <li>Software Engineer &&&nbsp;</li>
+            <li>Scottsdale Resident &&&nbsp;</li>
+            <li>Living Life;</li>
+          </ul>
+          <div>
+
+          </div>
+          <ul className="social-box">
             <li>
               <a className="btn-floating btn-large waves-effect waves-light social-media-icon" href="https://www.linkedin.com/in/kevia-cloud" target="_blank" style={ { backgroundImage: `url(${styles.linkedIn})` } }>
               </a>
@@ -21,7 +30,7 @@ export default class App extends Component {
               </a>
             </li>
           </ul>
-        </div>
+        </section>
       </main>
     );
   }
