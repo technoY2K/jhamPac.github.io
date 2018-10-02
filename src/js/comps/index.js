@@ -7,7 +7,7 @@ export default class App extends Component {
     return (
       <main id="main" style={ { backgroundImage: `url(${styles.backgroundImage})` } }>
         <section className="nameBox">
-          <h1>Kevia Cloud</h1>
+          <h1>Tesla VIP Services</h1>
           <ul>
             <li>Software Engineer &&&nbsp;</li>
             <li>Scottsdale Resident &&&nbsp;</li>
