@@ -7,7 +7,7 @@ import { AppContainer } from 'react-hot-loader';
 import './scss/main';
 
 // components
-import App from 'comps/';
+import Application from 'comps/Application';
 
 const reactHotReload = (Component) => {
   ReactDOM.render(
@@ -19,7 +19,7 @@ const reactHotReload = (Component) => {
 }
 
 $(document).ready(function() {
-  reactHotReload(App);
+  reactHotReload(Application);
   if (module.hot) {
     module.hot.accept();
   }

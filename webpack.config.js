@@ -54,7 +54,7 @@ const PLUGINS = [
 
 ];
 
-if ( !isProduction ) {
+if (isProduction === false) {
   PLUGINS.push(new Webpack.HotModuleReplacementPlugin());
 }
 
