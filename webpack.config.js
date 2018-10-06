@@ -9,6 +9,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 const SCSS = [
     isProduction ? MiniCSSPlugin.loader : 'style-loader',
     'css-loader',
+    'postcss-loader',
     'resolve-url-loader',
     { loader: 'sass-loader', options: { sourceMap: true } },
     'import-glob-loader'
