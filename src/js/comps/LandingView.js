@@ -11,7 +11,7 @@ function Hero(props) {
       <div className="col s12 m6">
         <div className="card">
           <div class="card-image" style={ { backgroundImage: `url(${imgSrc.fun})` } }>
-            <span className="card-title">Card Title</span>
+            <span className="card-title">$95.00</span>
             <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
           </div>
           <div className="card-content">
@@ -24,7 +24,7 @@ function Hero(props) {
       <div className="col s12 m6">
         <div className="card">
           <div class="card-image" style={ { backgroundImage: `url(${imgSrc.backgroundImage})` } }>
-            <span className="card-title">Card Title</span>
+            <span className="card-title">$199.00</span>
             <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
           </div>
           <div className="card-content">
