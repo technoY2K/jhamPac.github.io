@@ -9,27 +9,24 @@ body {
 
   #app {
     #main-UI {
+      .headline {
+        letter-spacing: 2px;
+        margin-bottom: 45px;
+        text-align: center;
+      }
 
-      #landing-view {
-        .hero {
-          color: white;
-          letter-spacing: 2px;
-          height: 750px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+      .card {
+        .card-image {
+          height: 300px;
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center center;
-          position: relative;
+        }
+      }
 
-          h1 {
-            font-weight: 700;
-            text-align: center;
-          }
+      #landing-view {
+        .hero {
 
-          text-align: center;
         }
       }
     }
