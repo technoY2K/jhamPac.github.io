@@ -9,18 +9,22 @@ import './scss/main';
 // components
 import Application from 'comps/Application';
 
-const reactHotReload = (Component) => {
+function render(Component) {
+
   ReactDOM.render(
     <AppContainer>
       <Component />
     </AppContainer>,
     document.getElementById('app')
   );
-}
 
-$(document).ready(function() {
-  reactHotReload(Application);
   if (module.hot) {
     module.hot.accept();
   }
-});
+}
+
+if (document.readyState !== 'loading') {
+  render(Application);
+} else {
+  document.addEventListener('DOMContentLoaded', render.bind(null, Application));
+}

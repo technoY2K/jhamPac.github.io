@@ -1,7 +1,7 @@
 {
   "plugins": ["react-hot-loader/babel"],
   "presets": [
-    ["env", { "useBuiltIns": true }],
+    ["env", { "modules": false }],
     "react",
     "stage-0"
   ],

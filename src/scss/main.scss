@@ -7,27 +7,31 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
 
-  #main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    position: relative;
-    width: 100%;
+  #app {
+    #main-UI {
 
-    .nameBox {
-      color: white;
-      letter-spacing: 2px;
+      #landing-view {
+        .hero {
+          color: white;
+          letter-spacing: 2px;
+          height: 750px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+          position: relative;
 
-      h1 {
-        font-weight: 700;
-        text-align: center;
+          h1 {
+            font-weight: 700;
+            text-align: center;
+          }
+
+          text-align: center;
+        }
       }
-
-      text-align: center;
     }
   }
 }
