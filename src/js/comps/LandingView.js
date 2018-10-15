@@ -59,16 +59,13 @@ export default function LandingView(props) {
   return(
     <main id="landing-view" className="row">
       <Hero>
-        <Headline title="Route 66" tagline="America's oldest highway" />
+        <Headline title="Electric Saguaro" tagline="Luxury (⚡️EV) electric vehichle rentals" />
       </Hero>
 
       <TextBox message="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.">
-        <Headline title="First date?" tagline="Family fun, anniversary, road trip buddies" />
+        <Headline title="Need to break out the loop?" tagline="Explore Arizona in a Tesla" />
       </TextBox>
 
-      <Hero>
-        <Headline title="Mojave Desert" tagline="Dubai like sand" />
-      </Hero>
     </main>
   );
 }
