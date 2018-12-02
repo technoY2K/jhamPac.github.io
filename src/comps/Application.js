@@ -6,7 +6,7 @@ export default class Application extends Component {
       <main id="UI">
         <div className="row">
           <div className="col s12">
-            <p className="left-align huge-font">hello, my name is kevia. I am a web application developer based out of <span className="grey-it-up">SCOTTSDALE ARIZONA</span></p>
+            <p className="left-align huge-font">hello, my name is kevia. I am a web application developer based out of <span className="grey-it-up">SCOTTSDALE</span>, arizona.</p>
           </div>
         </div>
         <div className="row container bio-container">
