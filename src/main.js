@@ -6,7 +6,7 @@ import './scss/main'
 
 function Prada() {
   return(
-    <div id="UI">Welcome</div>
+    <div id="UI">Welcome to .me</div>
   )
 }
 

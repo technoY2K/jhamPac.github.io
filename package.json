@@ -4,9 +4,10 @@
   "description": "Kevia's official portfolio",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build ./src/index.html --out-dir /",
-    "start": "parcel ./src/index.html --port 9500"
+    "clean": "rm *.css && rm *.map && rm *.js",
+    "build": "npm run clean && parcel build ./src/index.html --out-dir .",
+    "start": "parcel ./src/index.html --port 9500",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "cssnano": "^4.1.7",
     "flux": "^3.1.3",
     "import-glob-loader": "^1.1.0",
     "material-design-icons": "^3.0.1",
