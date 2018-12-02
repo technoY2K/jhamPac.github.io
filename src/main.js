@@ -1,30 +1,25 @@
-// Dependencies
-import React    from 'react';
-import ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
+import React    from 'react'
+import ReactDOM from 'react-dom'
 
 // scss
-import './scss/main';
+import './scss/main'
 
-// components
-import Application from 'comps/Application';
+function Prada() {
+  return(
+    <div id="UI">Welcome</div>
+  )
+}
 
 function render(Component) {
 
   ReactDOM.render(
-    <AppContainer>
-      <Component />
-    </AppContainer>,
-    document.getElementById('app')
-  );
-
-  if (module.hot) {
-    module.hot.accept();
-  }
+    <Component />,
+    document.getElementById('mount-point')
+  )
 }
 
 if (document.readyState !== 'loading') {
-  render(Application);
+  render(Prada);
 } else {
-  document.addEventListener('DOMContentLoaded', render.bind(null, Application));
+  document.addEventListener('DOMContentLoaded', render.bind(null, Prada))
 }

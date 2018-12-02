@@ -5,8 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production webpack --mode production --progress -p",
-    "start": "webpack-dev-server --mode development --progress --open"
+    "build": "parcel build ./src/index.html --out-dir /",
+    "start": "parcel ./src/index.html --port 9500"
   },
   "repository": {
     "type": "git",
