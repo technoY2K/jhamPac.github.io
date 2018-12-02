@@ -8,6 +8,26 @@ body {
   #mount-point {
     #UI {
       height: 100vh;
+
+      p.huge-font {
+        font-size: 50px;
+        line-height: 4.5rem;
+
+        span.grey-it-up {
+          @extend .grey-text;
+        }
+      }
+
+      .bio-container {
+        @extend .red, .accent-3;
+        border: 5px solid black;
+        height: 155px;
+
+        p {
+          position: absolute;
+          line-height: 2rem;
+        }
+      }
     }
   }
 }
