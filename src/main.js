@@ -1,14 +1,9 @@
 import React    from 'react'
 import ReactDOM from 'react-dom'
 
-// scss
-import './scss/main'
+import Application from 'comps/Application'
 
-function Prada() {
-  return(
-    <div id="UI">Welcome to .me</div>
-  )
-}
+import './scss/main'
 
 function render(Component) {
 
@@ -19,7 +14,7 @@ function render(Component) {
 }
 
 if (document.readyState !== 'loading') {
-  render(Prada);
+  render(Application);
 } else {
-  document.addEventListener('DOMContentLoaded', render.bind(null, Prada))
+  document.addEventListener('DOMContentLoaded', render.bind(null, Application))
 }
