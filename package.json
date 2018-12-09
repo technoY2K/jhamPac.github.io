@@ -20,7 +20,9 @@
     "url": "https://github.com/jhamPac/jhamPac.github.io/issues"
   },
   "homepage": "https://github.com/jhamPac/jhamPac.github.io",
-  "dependencies": {},
+  "dependencies": {
+    "images": "^3.0.1"
+  },
   "devDependencies": {
     "autoprefixer": "^8.6.2",
     "babel-core": "^6.26.3",
@@ -40,6 +42,7 @@
     "react-dom": "^16.4.1"
   },
   "alias": {
-    "comps": "./src/comps"
+    "comps": "./src/comps",
+    "images": "./src/images"
   }
 }
