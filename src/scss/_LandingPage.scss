@@ -50,12 +50,38 @@
     height: 50vh;
 
     .bio {
-      @extend .red;
+
       height: 100%;
     }
 
     .contact {
+      display: flex;
+      justify-content: center;
       height: 100%;
+
+      ul {
+        li {
+          margin-bottom: 40px;
+
+          .padded-multiline {
+            @extend .red;
+            line-height: 1.4;
+            padding: 2px 0;
+            margin: 20px auto;
+
+            a {
+              font-style: italic;
+              font-size: 40px;
+              font-weight: 900;
+              color: white;
+              display: inline;
+              padding: 1rem;
+              letter-spacing: 2px;
+              box-decoration-break: clone;
+            }
+          }
+        }
+      }
     }
   }
 }
