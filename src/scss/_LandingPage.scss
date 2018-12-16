@@ -1,27 +1,11 @@
 #landing-page {
   .top-half {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 50vh;
-    position: relative;
-    margin-bottom: 0;
-
-    .tint-box {
-      @extend .indigo, .darken-4;
-      opacity: 0.8;
-      position: absolute;
-      height: 100%;
-      width: 100%;
-    }
+    margin-bottom: 40px;
 
     .text-box {
-      color: white;
-      position: absolute;
-      z-index: 999;
-      height: 100%;
+      @extend .red-text;
       width: 100%;
-      padding-top: 50px;
+      padding-top: 25px;
       text-align: center;
 
       .title-name {
@@ -47,11 +31,13 @@
   }
 
   .bottom-half {
-    height: 50vh;
-
     .bio {
+      font-family: 'Roboto Mono', monospace;
+      text-align: left;
 
-      height: 100%;
+      p {
+        font-size: 18px;
+      }
     }
 
     .contact {
