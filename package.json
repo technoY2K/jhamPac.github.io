@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/jhamPac/jhamPac.github.io",
   "dependencies": {
-    "images": "^3.0.1"
+    "images": "^3.0.1",
+    "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^8.6.2",
@@ -39,7 +40,8 @@
     "node-sass": "^4.11.0",
     "prop-types": "^15.6.1",
     "react": "^16.7.0-alpha.2",
-    "react-dom": "^16.7.0-alpha.2"
+    "react-dom": "^16.7.0-alpha.2",
+    "react-router": "^4.3.1"
   },
   "alias": {
     "comps": "./src/comps",

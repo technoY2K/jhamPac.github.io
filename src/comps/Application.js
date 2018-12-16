@@ -1,17 +1,24 @@
 import React, { Component, lazy, Suspense } from 'react'
-import NavigationBar from './NavigationBar'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 
-const LandingPage = lazy(() => import('./LandingPage'));
+import NavigationBar from './NavigationBar'
+const LandingPage = lazy(() => import('./LandingPage'))
 
 export default class Application extends Component {
   render() {
     return(
-      <main id="UI">
-        <NavigationBar />
-        <Suspense fallback={ <div><h3>Loading...</h3></div> }>
-          <LandingPage />
-        </Suspense>
-      </main>
+      <Router>
+        <main id="UI">
+          <NavigationBar />
+          <Suspense fallback={ <div><h3>Loading...</h3></div> }>
+            <Switch>
+              <Route path="/">
+                <LandingPage />
+              </Route>
+            </Switch>
+          </Suspense>
+        </main>
+      </Router>
     )
   }
 }
