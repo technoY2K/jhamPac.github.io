@@ -3,6 +3,7 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import M from 'materialize-css'
 
 import NavigationBar from './NavigationBar'
+import Footer        from './Footer'
 const LandingPage = lazy(() => import('./LandingPage'))
 
 export default class Application extends Component {
@@ -23,6 +24,7 @@ export default class Application extends Component {
               </Route>
             </Switch>
           </Suspense>
+          <Footer />
         </main>
       </Router>
     )

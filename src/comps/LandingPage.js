@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import imgSrc from 'images/hero_background.jpg'
 
 export default function LandingPage() {
-
   return(
     <div id='landing-page'>
       <div className="row top-half">
