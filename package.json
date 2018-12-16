@@ -38,8 +38,8 @@
     "materialize-css": "^1.0.0",
     "node-sass": "^4.11.0",
     "prop-types": "^15.6.1",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "react": "^16.7.0-alpha.2",
+    "react-dom": "^16.7.0-alpha.2"
   },
   "alias": {
     "comps": "./src/comps",
