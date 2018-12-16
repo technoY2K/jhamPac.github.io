@@ -36,10 +36,10 @@
     "import-glob-loader": "^1.1.0",
     "material-design-icons": "^3.0.1",
     "materialize-css": "^1.0.0",
-    "node-sass": "^4.9.4",
+    "node-sass": "^4.11.0",
     "prop-types": "^15.6.1",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
   },
   "alias": {
     "comps": "./src/comps",
