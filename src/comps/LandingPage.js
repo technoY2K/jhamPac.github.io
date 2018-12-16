@@ -16,10 +16,10 @@ export default function LandingPage() {
       </div>
       <div className="row nomargin bottom-half">
         <div className="col s12 m6 bio">
-          <p>{`The count is ${count}`}</p>
+          <h3 className="white-text">{`The count is ${count}`}</h3>
         </div>
         <div className="col s12 m6 contact">
-          <button className="btn btn-blue" onClick={ () => setCount(count + 1) }>Click Me</button>
+          <button className="waves-effect waves-light btn-large red" onClick={ () => setCount(count + 1) }>Click Me</button>
         </div>
       </div>
     </div>

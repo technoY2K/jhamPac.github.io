@@ -1,10 +1,16 @@
 import React, { Component, lazy, Suspense } from 'react'
 import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+import M from 'materialize-css'
 
 import NavigationBar from './NavigationBar'
 const LandingPage = lazy(() => import('./LandingPage'))
 
 export default class Application extends Component {
+
+  componentDidMount() {
+    M.AutoInit()
+  }
+
   render() {
     return(
       <Router>
