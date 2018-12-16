@@ -36,7 +36,9 @@
       text-align: left;
 
       p {
+        @extend .grey-text, .text-darken-4;
         font-size: 18px;
+        font-weight: bold;
       }
     }
 
