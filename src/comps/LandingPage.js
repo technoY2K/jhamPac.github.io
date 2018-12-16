@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import imgSrc from 'images/hero_background.jpg'
 
 export default function LandingPage() {
+  const [count, setCount] = useState(0)
+
   return(
     <div id='landing-page'>
       <div className="row top-half" style={{ backgroundImage: `url(${imgSrc})` }}>
@@ -14,10 +16,10 @@ export default function LandingPage() {
       </div>
       <div className="row nomargin bottom-half">
         <div className="col s12 m6 bio">
-          <p>asdfasf</p>
+          <p>{`The count is ${count}`}</p>
         </div>
         <div className="col s12 m6 contact">
-
+          <button className="btn btn-blue" onClick={ () => setCount(count + 1) }>Click Me</button>
         </div>
       </div>
     </div>
