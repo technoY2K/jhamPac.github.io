@@ -1,33 +1,17 @@
 @import "~materialize-css/sass/materialize";
-@import url('https://fonts.googleapis.com/css?family=Varela');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import './mixins/breakpoint';
 
 body {
-  font-family: "Varela", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
 
   #mount-point {
     #UI {
-      height: 100vh;
-
-      p.huge-font {
-        font-size: 50px;
-        line-height: 4.5rem;
-
-        span.grey-it-up {
-          @extend .grey-text;
-        }
-      }
-
-      .bio-container {
-        @extend .red, .accent-3;
-        border: 5px solid black;
-        height: 155px;
-
-        p {
-          position: absolute;
-          line-height: 2rem;
-        }
-      }
+      @import "./NavigationBar";
+      @import "./LandingPage";
+      @import "./Footer";
     }
   }
 }
