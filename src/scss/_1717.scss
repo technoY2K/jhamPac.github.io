@@ -1,5 +1,6 @@
 %yo {
   background-color: black;
+  font-family: "Titillium Web", sans-serif;
   font-style: italic;
   font-size: 40px;
   font-weight: 900;
@@ -14,10 +15,12 @@
 #Ω {
   height: 15vh;
 
-  h1 {
+  h1.å {
     @extend %yo;
+    font-family: 'Vollkorn', serif;
     top: 150px;
     left: 10px;
+    letter-spacing: -5px;
     transform: rotate(-17deg)
   }
 

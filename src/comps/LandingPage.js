@@ -38,7 +38,7 @@ export default function LandingPage() {
               </div>
             </li>
             <li>
-              <div className="padded-multiline black">
+              <div className="padded-multiline black center-align">
                 <Link to="/1717">17:17</Link>
               </div>
             </li>
