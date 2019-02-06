@@ -17,7 +17,7 @@ export default function LandingPage() {
           <p>React 🥇</p>
           <p>Parcel 🥇</p>
           <p>GraphQL 🥈</p>
-          <p>Google Cloud Functions 🥉</p>
+          <p>Google Cloud Functions 🥈</p>
           <span>I love movies from the 1990s like The 5th Element and even terrible ones like Demolition Man. Prada > Gucci right now and Mokba is the jamz!</span>
         </div>
         <div className="col s12 m6 contact">
