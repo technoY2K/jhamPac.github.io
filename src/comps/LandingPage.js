@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import imgSrc from 'images/hero_background.jpg'
+import { Link } from 'react-router-dom'
 
 export default function LandingPage() {
   return(
@@ -23,18 +23,23 @@ export default function LandingPage() {
         <div className="col s12 m6 contact">
           <ul>
             <li>
-              <div className="padded-multiline">
+              <div className="padded-multiline red">
                 <a href="https://www.linkedin.com/in/kevia-cloud/" target="_blank">linkedin</a>
               </div>
             </li>
             <li>
-              <div className="padded-multiline">
+              <div className="padded-multiline red">
                 <a href="https://twitter.com/keviaDotMe" target="_blank">twitter</a>
               </div>
             </li>
             <li>
-              <div className="padded-multiline">
+              <div className="padded-multiline red">
                 <a href="https://github.com/jhamPac" target="_blank">github</a>
+              </div>
+            </li>
+            <li>
+              <div className="padded-multiline black">
+                <Link to="/1717">17:17</Link>
               </div>
             </li>
           </ul>

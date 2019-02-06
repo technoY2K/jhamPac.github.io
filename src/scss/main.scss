@@ -1,6 +1,7 @@
 @import "~materialize-css/sass/materialize";
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Vollkorn');
 @import './mixins/breakpoint';
 
 body {
@@ -11,6 +12,7 @@ body {
     #UI {
       @import "./NavigationBar";
       @import "./LandingPage";
+      @import "./1717";
       @import "./Footer";
     }
   }
