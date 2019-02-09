@@ -1,4 +1,4 @@
-import React, { Component, lazy, Suspense } from 'react'
+import React, { Component, lazy, Suspense, useEffect } from 'react'
 import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import M from 'materialize-css'
 
@@ -9,28 +9,27 @@ import Shmule        from './Shmule'
 const LandingPage = lazy(() => import('./LandingPage'))
 
 
-export default class Application extends Component {
-  componentDidMount() {
-    M.AutoInit()
-  }
+export default function Application() {
 
-  render() {
-    return(
-      <Router>
-        <main id="UI">
-          <NavigationBar />
-          <Suspense fallback={<div><h3>Loading...</h3></div>}>
-            <Switch>
-              <Route path="/1717" component={Ω}/>
-              <Route path="/shmule" component={Shmule}/>
-              <Route exact path="/">
-                <LandingPage />
-              </Route>
-            </Switch>
-          </Suspense>
-          <Footer />
-        </main>
-      </Router>
-    )
-  }
+  useEffect(() => {
+    M.AutoInit()
+  })
+
+  return (
+    <Router>
+      <main id="UI">
+        <NavigationBar />
+        <Suspense fallback={<div><h3>Loading...</h3></div>}>
+          <Switch>
+            <Route path="/1717" component={Ω}/>
+            <Route path="/shmule" component={Shmule}/>
+            <Route exact path="/">
+              <LandingPage />
+            </Route>
+          </Switch>
+        </Suspense>
+        <Footer />
+      </main>
+    </Router>
+  )
 }
