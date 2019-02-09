@@ -18,3 +18,5 @@ if (document.readyState !== 'loading') {
 } else {
   document.addEventListener('DOMContentLoaded', render.bind(null, Application))
 }
+
+console.log(`%cnew site, who dis?`, 'color: red; font-size: 34px;')
