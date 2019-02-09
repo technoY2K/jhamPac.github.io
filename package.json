@@ -38,6 +38,7 @@
     "@babel/plugin-proposal-throw-expressions": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "autoprefixer": "^8.6.2",
@@ -55,5 +56,8 @@
   "alias": {
     "comps": "./src/comps",
     "images": "./src/images"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
   }
 }

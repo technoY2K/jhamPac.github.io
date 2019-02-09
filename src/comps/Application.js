@@ -9,7 +9,6 @@ const LandingPage = lazy(() => import('./LandingPage'))
 
 
 export default class Application extends Component {
-
   componentDidMount() {
     M.AutoInit()
   }
