@@ -42,6 +42,11 @@ export default function LandingPage() {
                 <Link to="/1717">17:17</Link>
               </div>
             </li>
+            <li>
+              <div className="padded-multiline purple center-align">
+                <Link to="/shmule">shmule</Link>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
