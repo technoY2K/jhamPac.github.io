@@ -1,11 +1,8 @@
 @import "~materialize-css/sass/materialize";
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
-@import url('https://fonts.googleapis.com/css?family=Vollkorn:400,900');
 @import './mixins/breakpoint';
 
 body {
-  font-family: "Titillium Web", sans-serif;
+  font-family: serif;
   font-size: 16px;
 
   #mount-point {
@@ -13,7 +10,6 @@ body {
       @import "./NavigationBar";
       @import "./LandingPage";
       @import "./1717";
-      @import "./Shmule";
       @import "./Footer";
     }
   }
