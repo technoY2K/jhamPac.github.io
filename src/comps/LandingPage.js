@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function LandingPage() {
   return(
-    <div id='landing-page'>
+    <div id='landing-page' className="container">
       <div className="row top-half">
         <div className="col s12 text-box">
           <p className="title-name">Kevia Cloud</p>
@@ -23,28 +23,23 @@ export default function LandingPage() {
         <div className="col s12 m6 contact">
           <ul>
             <li>
-              <div className="padded-multiline red">
+              <div className="padded-multiline purple darken-4">
                 <a href="https://www.linkedin.com/in/kevia-cloud/" target="_blank">linkedin</a>
               </div>
             </li>
             <li>
-              <div className="padded-multiline red">
+              <div className="padded-multiline purple darken-4">
                 <a href="https://twitter.com/keviaDotMe" target="_blank">twitter</a>
               </div>
             </li>
             <li>
-              <div className="padded-multiline red">
+              <div className="padded-multiline purple darken-4">
                 <a href="https://github.com/jhamPac" target="_blank">github</a>
               </div>
             </li>
             <li>
               <div className="padded-multiline black center-align">
                 <Link to="/1717">17:17</Link>
-              </div>
-            </li>
-            <li>
-              <div className="padded-multiline purple center-align">
-                <Link to="/shmule">shmule</Link>
               </div>
             </li>
           </ul>

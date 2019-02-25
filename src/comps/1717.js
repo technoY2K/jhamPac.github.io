@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function Ω() {
   return (
-    <div id="Ω" className="">
+    <div id="Ω" className="container">
       <h1 className="center-align å">#Be grateful for SOMETHING</h1>
       <Link to="/">
         <h1 className="†">

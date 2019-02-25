@@ -3,7 +3,7 @@
     margin-bottom: 40px;
 
     .text-box {
-      @extend .red-text;
+      @extend .purple-text, .text-darken-4;
       width: 100%;
       padding-top: 25px;
       text-align: center;
@@ -22,7 +22,7 @@
       }
 
       .divider {
-        @extend .red;
+        @extend .purple, .darken-4;;
         height: 3px;
         margin: 0 auto;
         width: 50%;
