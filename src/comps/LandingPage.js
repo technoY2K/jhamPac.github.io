@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+// images
+import oneSrc from '../images/one.jpg'
+import twoSrc from '../images/two.jpg'
+import threeSrc from '../images/three.jpg'
+
 export default function LandingPage() {
   const [ degrees, setDegree ] = useState(0)
   const turnLeft  = () => setDegree(degrees - 90)
@@ -14,12 +19,14 @@ export default function LandingPage() {
     <div id='landing-page' className="container">
       <div className="wrap">
 	       <div className="cube" style={styleObj}>
-		      <div className="front"></div>
-		      <div className="back"></div>
+		      <div className="front" style={{backgroundImage: `url(${oneSrc})`}}></div>
+		      <div className="back">
+            <p>asfasf asdfasdl</p>
+          </div>
 		      <div className="top"></div>
 		      <div className="bottom"></div>
-		      <div className="left"></div>
-		      <div className="right"></div>
+		      <div className="left" style={{backgroundImage: `url(${twoSrc})`}}></div>
+		      <div className="right" style={{backgroundImage: `url(${threeSrc})`}}></div>
 	      </div>
       </div>
       <section>
