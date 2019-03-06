@@ -1,80 +1,54 @@
 #landing-page {
-  .top-half {
-    margin-bottom: 40px;
+  height: 100vh;
 
-    .text-box {
-      @extend .purple-text, .text-darken-4;
-      width: 100%;
-      padding-top: 25px;
-      text-align: center;
+  .wrap {
+    height: 200px;
+    width: 200px;
+    perspective: 0;
+    margin: 0 auto;
+    margin-top: 50px;
 
-      .title-name {
-        letter-spacing: 3px;
-        font-size: 24px;
-        font-weight: 300;
-        margin-bottom: 0;
-      }
-
-      h3 {
-        font-weight: 700;
-        margin-top: 0;
-        text-transform: uppercase;
-      }
-
-      .divider {
-        @extend .purple, .darken-4;;
-        height: 3px;
-        margin: 0 auto;
-        width: 50%;
-      }
-    }
-  }
-
-  .bottom-half {
-    .bio {
-      font-family: 'Roboto Mono', monospace;
-      text-align: left;
-
-      p {
-        @extend .grey-text, .text-darken-4;
-        font-size: 18px;
-        font-weight: bold;
-        margin: 5px 5px;
-      }
-
-      span {
-        display: inline-block;
-        @extend .grey-text, .text-darken-4;
-        margin-top: 20px;
-        margin-bottom: 25px;
-      }
-    }
-
-    .contact {
-      display: flex;
-      justify-content: center;
+    .cube {
       height: 100%;
+      width: 100%;
+      position: relative;
+	    transform-style: preserve-3d;
+      transform: translateZ(-100px) rotateY(0deg);
+      transition: transform 1s;
 
-      ul {
-        li {
-          margin-bottom: 40px;
+      div {
+        position: absolute;
+	      width: 200px;
+	      height: 200px;
 
-          .padded-multiline {
-            line-height: 1.4;
-            padding: 2px 0;
-            margin: 20px auto;
+        &.back {
+  	       background-color: purple;
+           transform: rotateY(180deg) translateZ(100px);
+         }
 
-            a {
-              font-style: italic;
-              font-size: 40px;
-              font-weight: 900;
-              color: white;
-              display: inline;
-              padding: 1rem;
-              letter-spacing: 2px;
-              box-decoration-break: clone;
-            }
-          }
+        &.right {
+  	      background-color: orange;
+          transform: rotateY(90deg) translateZ(100px);
+        }
+
+        &.left {
+  	      background-color: red;
+          transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        &.top {
+  	      background-color: yellow;
+          transform: rotateX( 90deg) translateZ(100px);
+        }
+
+        &.bottom {
+  	      background-color: black;
+          transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        &.front {
+  	      background-color: blue;
+          transform: rotateY(0deg) translateZ(100px);
         }
       }
     }
