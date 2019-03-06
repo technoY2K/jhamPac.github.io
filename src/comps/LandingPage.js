@@ -21,7 +21,8 @@ export default function LandingPage() {
 	       <div className="cube" style={styleObj}>
 		      <div className="front" style={{backgroundImage: `url(${oneSrc})`}}></div>
 		      <div className="back">
-            <p>asfasf asdfasdl</p>
+            <p>Contact me Kevia Cloud</p>
+            <p>Blahjas adsfasdf asdfasdf</p>
           </div>
 		      <div className="top"></div>
 		      <div className="bottom"></div>
