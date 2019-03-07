@@ -7,7 +7,6 @@ import Footer        from './Footer'
 import Ω             from './1717'
 const LandingPage = lazy(() => import('./LandingPage'))
 
-
 export default function Application() {
 
   useEffect(() => {
