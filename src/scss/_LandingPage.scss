@@ -23,20 +23,25 @@
         background-size: contain;
         background-repeat: no-repeat;
 
-        &.back {
-  	       @extend .white;
-           transform: rotateY(180deg) translateZ(200px);
-         }
-
-        &.right {
-  	      @extend .orange;
-          transform: rotateY(90deg) translateZ(200px);
+        &.front {
+          @extend .white;
+          transform: rotateY(0deg) translateZ(200px);
         }
 
         &.left {
-  	      @extend .red;
+          @extend .yellow, .darken-3;
           transform: rotateY(-90deg) translateZ(200px);
         }
+
+        &.back {
+  	       @extend .orange, .darken-4;
+           transform: rotateY(180deg) translateZ(200px);
+         }
+
+         &.right {
+           @extend .white;
+           transform: rotateY(90deg) translateZ(200px);
+         }
 
         &.top {
   	      background-color: yellow;
@@ -46,11 +51,6 @@
         &.bottom {
   	      background-color: black;
           transform: rotateX(-90deg) translateZ(200px);
-        }
-
-        &.front {
-          @extend .yellow, .darken-3;
-          transform: rotateY(0deg) translateZ(200px);
         }
       }
     }

@@ -20,14 +20,14 @@ export default function LandingPage() {
       <div className="wrap">
 	       <div className="cube" style={styleObj}>
 		      <div className="front" style={{backgroundImage: `url(${oneSrc})`}}></div>
-		      <div className="back">
+          <div className="left" style={{backgroundImage: `url(${twoSrc})`}}></div>
+		      <div className="back" style={{backgroundImage: `url(${threeSrc})`}}></div>
+          <div className="right">
             <p>Contact me Kevia Cloud</p>
             <p>Blahjas adsfasdf asdfasdf</p>
           </div>
 		      <div className="top"></div>
 		      <div className="bottom"></div>
-		      <div className="left" style={{backgroundImage: `url(${twoSrc})`}}></div>
-		      <div className="right" style={{backgroundImage: `url(${threeSrc})`}}></div>
 	      </div>
       </div>
       <section>

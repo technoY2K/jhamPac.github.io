@@ -4,7 +4,6 @@ import M from 'materialize-css'
 
 import NavigationBar from './NavigationBar'
 import Footer        from './Footer'
-import Ω             from './1717'
 const LandingPage = lazy(() => import('./LandingPage'))
 
 export default function Application() {
@@ -19,7 +18,6 @@ export default function Application() {
         <NavigationBar />
         <Suspense fallback={<div><h3>Loading...</h3></div>}>
           <Switch>
-            <Route path="/1717" component={Ω}/>
             <Route exact path="/">
               <LandingPage />
             </Route>
