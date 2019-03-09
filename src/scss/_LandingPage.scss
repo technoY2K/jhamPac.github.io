@@ -40,7 +40,15 @@
 
          &.right {
            @extend .white;
+           padding: 25px;
            transform: rotateY(90deg) translateZ(200px);
+
+           section {
+             box-shadow: 2px 4px 3px grey;
+             padding-bottom: 3px;
+             padding-left: 6px;
+             height: auto;
+           }
          }
 
         &.top {
