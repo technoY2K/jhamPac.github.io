@@ -49,6 +49,7 @@
         }
 
         &.front {
+          @extend .yellow, .darken-3;
           transform: rotateY(0deg) translateZ(200px);
         }
       }
