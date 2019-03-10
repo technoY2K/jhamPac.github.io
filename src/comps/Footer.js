@@ -6,7 +6,7 @@ export default function Footer() {
     <AppContextConsumer>
       {
         ({turnLeft, turnRight}) => (
-          <nav id="footer" className="row container">
+          <footer id="footer" className="row">
             <div className="col s12">
               <button className="btn" onClick={turnLeft}>
                 <i className="material-icons">
@@ -17,7 +17,7 @@ export default function Footer() {
                 <i className="material-icons">arrow_forward</i>
               </button>
             </div>
-          </nav>
+          </footer>
         )
       }
     </AppContextConsumer>

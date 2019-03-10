@@ -12,7 +12,7 @@ export default function LandingPage({ degrees }) {
   }
 
   return(
-    <div id='landing-page' className="container">
+    <div id='landing-page'>
       <div className="wrap">
 	       <div className="cube" style={styleObj}>
 		      <div className="front" style={{backgroundImage: `url(${oneSrc})`}}></div>

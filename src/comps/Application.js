@@ -28,7 +28,7 @@ export default function Application() {
   return (
     <Router>
       <AppContext.Provider value={context}>
-        <main id="UI">
+        <section id="UI" className="container">
           <NavigationBar />
           <Suspense fallback={<div><h3>Loading...</h3></div>}>
             <Switch>
@@ -38,7 +38,7 @@ export default function Application() {
             </Switch>
           </Suspense>
           <Footer />
-        </main>
+        </section>
       </AppContext.Provider>
     </Router>
   )
