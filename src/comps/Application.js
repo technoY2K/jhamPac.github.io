@@ -8,7 +8,7 @@ import Footer        from './Footer'
 const LandingPage = lazy(() => import('./LandingPage'))
 
 // context
-const AppContext  = createContext()
+const AppContext = createContext()
 export const AppContextConsumer = AppContext.Consumer
 
 export default function Application() {
