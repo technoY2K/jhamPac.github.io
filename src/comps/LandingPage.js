@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
 // images
@@ -6,11 +6,7 @@ import oneSrc from '../images/one.jpg'
 import twoSrc from '../images/two.jpg'
 import threeSrc from '../images/three.jpg'
 
-export default function LandingPage() {
-  const [ degrees, setDegree ] = useState(0)
-  const turnLeft  = () => setDegree(degrees - 90)
-  const turnRight = () => setDegree(degrees + 90)
-
+export default function LandingPage({ degrees }) {
   const styleObj = {
     transform: `translateZ(-100px) rotateY(${degrees}deg)`
   }
@@ -34,10 +30,6 @@ export default function LandingPage() {
 		      <div className="bottom"></div>
 	      </div>
       </div>
-      <section>
-        <button onClick={ turnLeft }>Left</button>
-        <button onClick={ turnRight }>Right</button>
-      </section>
     </div>
   )
 }

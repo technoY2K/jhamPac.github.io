@@ -1,16 +1,19 @@
 import React from 'react'
-import { withRouter } from 'react-router'
+import { AppContextConsumer } from './Application'
 
-function Footer({ location }) {
-  const date = (location.pathname === '/1717') ? '17:17' : new Date().getFullYear()
-
+export default function Footer() {
   return(
-    <nav id="footer" className="row">
-      <div className="col s12">
-        <h5>{date}</h5>
-      </div>
-    </nav>
+    <AppContextConsumer>
+      {
+        ({turnLeft, turnRight}) => (
+          <nav id="footer" className="row container">
+            <div className="col s12">
+              <button onClick={turnLeft}>Left</button>
+              <button onClick={turnRight}>Right</button>
+            </div>
+          </nav>
+        )
+      }
+    </AppContextConsumer>
   )
 }
-
-export default withRouter(Footer);

@@ -24,7 +24,7 @@
         background-repeat: no-repeat;
 
         &.front {
-          @extend .white;
+          @extend .blue, .darken-4;
           transform: rotateY(0deg) translateZ(200px);
         }
 
