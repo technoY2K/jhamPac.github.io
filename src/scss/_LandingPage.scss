@@ -30,7 +30,7 @@
 
         &.left {
           @extend .yellow, .darken-3;
-          transform: rotateY(-90deg) translateZ(200px);
+          transform: rotateY(90deg) translateZ(200px);
         }
 
         &.back {
@@ -41,7 +41,7 @@
          &.right {
            @extend .white;
            padding: 25px;
-           transform: rotateY(90deg) translateZ(200px);
+           transform: rotateY(-90deg) translateZ(200px);
 
            section {
              box-shadow: 2px 4px 3px grey;

@@ -13,8 +13,8 @@ export const AppContextConsumer = AppContext.Consumer
 
 export default function Application() {
   const [ degrees, setDegree ] = useState(0)
-  const turnLeft  = () => setDegree(degrees - 90)
-  const turnRight = () => setDegree(degrees + 90)
+  const turnLeft  = () => setDegree(degrees + 90)
+  const turnRight = () => setDegree(degrees - 90)
 
   const context = {
     turnLeft,
