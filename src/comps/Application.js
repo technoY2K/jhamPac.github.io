@@ -9,18 +9,16 @@ const LandingPage = lazy(() => import('./LandingPage'))
 
 
 export default function Application() {
-
   useEffect(() => {
     M.AutoInit()
   })
 
   return (
     <Router>
-      <main id="UI">
+      <main id="UI" className="container">
         <NavigationBar />
         <Suspense fallback={<div><h3>Loading...</h3></div>}>
           <Switch>
-            <Route path="/1717" component={Ω}/>
             <Route exact path="/">
               <LandingPage />
             </Route>

@@ -1,15 +1,16 @@
 @import "~materialize-css/sass/materialize";
 @import './mixins/breakpoint';
+@import url('https://fonts.googleapis.com/css?family=Space+Mono&display=swap');
 
 body {
-  font-family: serif;
+  @extend .light-green, .lighten-1;
+  font-family: 'Space Mono', monospace;
   font-size: 16px;
 
   #mount-point {
     #UI {
       @import "./NavigationBar";
       @import "./LandingPage";
-      @import "./1717";
       @import "./Footer";
     }
   }

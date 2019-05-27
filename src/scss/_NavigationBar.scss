@@ -1,5 +1,7 @@
 #navigation-bar {
-  @extend .purple, .darken-4;
+  @extend .white;
+  color: black;
   height: 64px;
+  margin-top: 45px;
   margin-bottom: 0;
 }

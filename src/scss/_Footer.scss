@@ -1,5 +1,22 @@
 #footer {
-  @extend .purple, .darken-4;
-  margin-bottom: 0;
-  text-align: center;
+  @extend .white;
+  color: black;
+
+  li {
+    font-size: 14px;
+
+    a {
+      color: black;
+      padding: 0;
+      text-decoration: underline;
+
+      &:hover {
+        background-color: white;
+      }
+    }
+
+    &.dots {
+      margin: 0 5px;
+    }
+  }
 }
