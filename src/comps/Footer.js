@@ -12,8 +12,6 @@ function Footer() {
           <li className="dots">&bull;</li>
           <li><a href="https://github.com/jhamPac">github</a></li>
           <li className="dots">&bull;</li>
-          <li><a href="https://stackoverflow.com/users/3276646/jhampac">stackoverflow</a></li>
-          <li className="dots">&bull;</li>
           <li><a href="https://www.linkedin.com/in/kevia-cloud">linkedIn</a></li>
         </ul>
         <span className="right">{date}</span>
