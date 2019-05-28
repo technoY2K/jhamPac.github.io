@@ -15,6 +15,7 @@ export default function LandingPage() {
           <li>riding in teslas ⚡️</li>
           <li>still listening to techno</li>
           <li>building control panel software at some big COMPANY</li>
+          <li>viewing life with 20/15 vision 👀</li>
         </ul>
       </div>
     </div>
