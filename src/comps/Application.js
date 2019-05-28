@@ -14,7 +14,6 @@ export default function Application() {
   return (
     <Router>
       <main id="UI" className="container">
-        <NavigationBar />
         <Suspense fallback={<div><h3>Loading...</h3></div>}>
           <Switch>
             <Route exact path="/">

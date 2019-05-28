@@ -4,12 +4,16 @@ import { Link } from 'react-router-dom'
 export default function LandingPage() {
   return(
     <div id='landing-page' className="row">
-      <div className="col s12 text-body">
-        I'm just a guy trying to make it in this world 🌍 just like you. Some long message ok. Whatever ok yeah.
-
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
+      <div className="col s9 m7 text-body">
+        <h3>Kevia Cloud</h3>
+        <h4>I'm just an individual trying to make it in this world 🌍 just like you Currently im...</h4>
+        <ul>
+          <li>changing the world with blockchain technology</li>
+          <li>wearing hawaiian shirts</li>
+          <li>living in phoenix</li>
+          <li>riding in teslas ⚡️</li>
+          <li>building control panel software at some big COMPANY</li>
+        </ul>
       </div>
     </div>
   )
