@@ -10,7 +10,5 @@ export default {
       }
     }
   },
-  main: {
-    width: '70%'
-  }
+  main: {}
 }
